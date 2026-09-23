@@ -17,6 +17,54 @@ body {
   font-size: 15px;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.7); }
+
+.project-note {
+  margin: 20px 0 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-style: italic; }
+
+.project-item {
+  margin-top: 55px; }
+
+.project-assets-note {
+  margin: 10px 0 0;
+  padding: 14px 18px;
+  border-left: 3px solid #2c98f0;
+  background: rgba(44, 152, 240, 0.06);
+  color: rgba(0, 0, 0, 0.6); }
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 18px;
+  margin-top: 15px;
+  align-items: start; }
+
+.project-gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+.project-gallery a:hover,
+.project-gallery a:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2); }
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 20;
+  object-fit: cover;
+  object-position: top; }
+
+@media screen and (max-width: 480px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px; }
+}
   @media screen and (max-width: 992px) {
     body {
       font-size: 16px; } }
